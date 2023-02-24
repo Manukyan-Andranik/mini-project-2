@@ -7,14 +7,13 @@ def dice_roll():                             #  Dice roll function
     summ = dice1 + dice2
     return (dice1, dice2, summ)
 
+def clear_screen():                         #function for clear screen("cls" for windows)
+    os.system("clear||cls")
 
 start = True
-
 while start:
-    os.system("clear")                          # Clear screen
-
+    clear_screen()                          
     print("Start Game".center(30," "), end = "\n" * 2)
-
     dice1, dice2, summ = dice_roll()    # First dice roll
 
     if not  summ in [4, 5, 6, 8, 9, 10]: 
